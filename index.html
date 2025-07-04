@@ -6,7 +6,7 @@
     <title>elfie_sweetpie | OnlyFans</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@400;600&display=swap');
-        
+
         body {
             font-family: 'Montserrat', sans-serif;
             background-color: #000;
@@ -21,7 +21,7 @@
             overflow: hidden;
             position: relative;
         }
-        
+
         .hearts {
             position: absolute;
             top: 0;
@@ -31,19 +31,19 @@
             z-index: 0;
             opacity: 0.3;
         }
-        
+
         .heart {
             position: absolute;
             font-size: 20px;
             color: #ff2d75;
             animation: float 5s infinite ease-in-out;
         }
-        
+
         @keyframes float {
             0%, 100% { transform: translateY(0) rotate(0deg); }
             50% { transform: translateY(-20px) rotate(10deg); }
         }
-        
+
         .container {
             max-width: 400px;
             padding: 30px;
@@ -55,7 +55,7 @@
             backdrop-filter: blur(5px);
             border: 1px solid #ff2d75;
         }
-        
+
         .avatar {
             width: 150px;
             height: 150px;
@@ -65,31 +65,31 @@
             margin-bottom: 20px;
             box-shadow: 0 0 20px rgba(255, 45, 117, 0.7);
         }
-        
+
         h1 {
             font-size: 32px;
             margin: 0 0 10px;
             color: #ff2d75;
             font-weight: 600;
         }
-        
+
         .sexy-text {
-            font-family: 'Playfair Display', serif; /* Измененный шрифт */
-            font-size: 22px; /* Чуть меньше для читаемости */
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
             color: #ff9ebb;
             margin-bottom: 30px;
             text-shadow: 0 0 10px rgba(255, 45, 117, 0.5);
-            font-weight: 500; /* Полужирный, но не слишком */
-            line-height: 1.4; /* Лучший интервал */
+            font-weight: 500;
+            line-height: 1.4;
         }
-        
+
         .timer {
             font-size: 18px;
             color: #ff9ebb;
             margin-bottom: 25px;
             font-weight: 600;
         }
-        
+
         .main-link {
             display: inline-block;
             background-color: #ff2d75;
@@ -103,13 +103,13 @@
             transition: all 0.3s ease;
             margin-bottom: 20px;
         }
-        
+
         .main-link:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 30px rgba(255, 45, 117, 0.9);
             background-color: #ff1a6a;
         }
-        
+
         .footer {
             margin-top: 20px;
             color: #999;
@@ -119,24 +119,24 @@
 </head>
 <body>
     <div class="hearts" id="hearts"></div>
-    
+
     <div class="container">
         <!-- Profile Image -->
-        <img src="https://via.placeholder.com/150" alt="elfie_sweetpie" class="avatar">
-        
+        <img src="https://i.ibb.co/QBxgRxV/photo-2025-02-05-19-15-14.jpg" alt="elfie_sweetpie" class="avatar">
+
         <!-- Name & Bio -->
         <h1>elfie_sweetpie</h1>
         <p class="sexy-text">Exclusive content just for you... Want to see my spicy side? 😘</p>
-        
+
         <!-- Timer -->
         <div class="timer" id="timer">
             New subscriber discount ends in: <br>
             <span id="countdown">07:00:00</span>
         </div>
-        
+
         <!-- Main Link -->
         <a href="https://onlyfans.com/effymiles" class="main-link">JOIN MY ONLYFANS</a>
-        
+
         <!-- Footer -->
         <div class="footer">
             🔞 18+ content | © 2024 elfie_sweetpie
@@ -155,24 +155,24 @@
             heart.style.animationDelay = Math.random() * 5 + 's';
             heartsContainer.appendChild(heart);
         }
-        
+
         // Countdown timer (7 days)
         const countdownDate = new Date();
         countdownDate.setDate(countdownDate.getDate() + 7);
-        
+
         function updateTimer() {
             const now = new Date().getTime();
             const distance = countdownDate - now;
-            
+
             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            
+
             document.getElementById('countdown').innerHTML = 
                 `${days}d ${hours}h ${minutes}m ${seconds}s`;
         }
-        
+
         updateTimer();
         setInterval(updateTimer, 1000);
     </script>
